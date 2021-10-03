@@ -14,6 +14,7 @@
         Весь товар на гарантии в течении двух недель.</string>
     <string name="name">Имя</string>
     <string name="name1">Фамилия</string>
+    <string name="hello">Добро пожаловать,</string>
     <string name="login">Логин</string>
     <string name="password">Пароль</string>
     <string name="address">Адрес доставки</string>

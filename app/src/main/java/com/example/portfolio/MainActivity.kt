@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import com.example.portfolio.databinding.ActivityMainBinding
@@ -41,12 +42,21 @@ class MainActivity : AppCompatActivity() {
                 val account = task.getResult(ApiException::class.java)
                 if (account != null){
                     firebaseAuthWithGoogle(account.idToken!!)
-                    binding.bAct1.text = "Войти"
                 }
 
             }catch (e: ApiException){
 
             }
+        }
+
+        //добавляю имя если зарегистрирован и пишу войти
+        val name = auth.currentUser?.displayName
+
+        if(auth.currentUser != null) {
+            binding.tvName.text = name
+            binding.tvHello.visibility = View.VISIBLE
+            binding.tvName.visibility = View.VISIBLE
+            binding.bAct1.text = "Войти"
         }
 
         //Открываю второе активити по нажатию на кнопку регистрации

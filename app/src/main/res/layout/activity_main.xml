@@ -41,4 +41,28 @@
         app:layout_constraintStart_toStartOf="@+id/imBochka"
         app:srcCompat="@drawable/udacha" />
 
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/bAct1"
+        app:layout_constraintEnd_toEndOf="@+id/bAct1"
+        app:layout_constraintStart_toStartOf="@+id/bAct1" />
+
+    <TextView
+        android:id="@+id/tvHello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/tvName"
+        app:layout_constraintEnd_toEndOf="@+id/tvName"
+        app:layout_constraintStart_toStartOf="@+id/tvName" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

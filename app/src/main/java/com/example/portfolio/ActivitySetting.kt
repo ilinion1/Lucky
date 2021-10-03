@@ -25,16 +25,20 @@ class ActivitySetting : AppCompatActivity() {
 
         //закрываю активити и передаю имя и фамилию, так же задаю в настройках имя
         binding.bBack.setOnClickListener {
-            val name = binding.edName.text.toString()  + binding.edName2.text.toString()
-            val i = Intent()
-            i.putExtra("key","$name")
-            val adress = binding.edAddress.text.toString()
-            i.putExtra("key2","$adress")
-            setResult(RESULT_OK, i)
-            binding.tvName.visibility = View.VISIBLE
-            binding.tvName.text = name
+            if (binding.edName.text.isNullOrEmpty()) {
+                finish()
+            } else{
 
-            finish()
+              val name = binding.edName.text.toString()  + binding.edName2.text.toString()
+              val i = Intent()
+                i.putExtra("key","$name")
+                val adress = binding.edAddress.text.toString()
+                i.putExtra("key2","$adress")
+                setResult(RESULT_OK, i)
+                binding.tvName.visibility = View.VISIBLE
+                binding.tvName.text = name
+                finish()
+            }
         }
 
     }
