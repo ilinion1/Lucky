@@ -17,11 +17,9 @@ class ActivitySetting : AppCompatActivity() {
         binding = ActivitySettingBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-        //прячет имя если его не указывали
-        if(binding.edName.text.isNullOrEmpty() && binding.edName2.text.isNullOrEmpty() ){
-            binding.tvName.visibility = View.GONE
-        }
+        //получаю имя с гугла и задаю его
+        val nameGoogle = intent.getStringExtra("key2")
+        binding.tvName.text = nameGoogle
 
         //закрываю активити и передаю имя и фамилию, так же задаю в настройках имя
         binding.bBack.setOnClickListener {
@@ -29,7 +27,7 @@ class ActivitySetting : AppCompatActivity() {
                 finish()
             } else{
 
-              val name = binding.edName.text.toString()  + binding.edName2.text.toString()
+              val name = binding.edName.text.toString()  + " " + binding.edName2.text.toString()
               val i = Intent()
                 i.putExtra("key","$name")
                 val adress = binding.edAddress.text.toString()

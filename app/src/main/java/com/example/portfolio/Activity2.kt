@@ -4,6 +4,7 @@ import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.activity.result.ActivityResult
@@ -36,6 +37,12 @@ class Activity2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = Activity2Binding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        //получаю имя с почты при регистрации и меняю имя
+        val nameGoogle = intent.getStringExtra("key")
+        binding.tvNameDrawer.text = nameGoogle
+        binding.tvNameDrawer.visibility = View.VISIBLE
+
 
         auth = Firebase.auth
         //наблюдает когда можно обновить данные полученные с фрагмента
@@ -72,7 +79,12 @@ class Activity2 : AppCompatActivity() {
                 }
                 R.id.setting ->{
                     //открываю активи setting  с ожиданием результата
-                    launcher?.launch(Intent(this,ActivitySetting::class.java))
+                    val nameAct2 = binding.tvNameDrawer.text.toString()
+                    launcher?.launch(Intent(this,ActivitySetting::class.java)
+                        .putExtra("key2","$nameAct2"))
+
+
+
                 }
             }
             true
@@ -124,6 +136,11 @@ class Activity2 : AppCompatActivity() {
 
         //выход
         binding.bExit.setOnClickListener {
+
+            val newName = binding.tvNameDrawer.text.toString()
+            val  i = Intent()
+            i.putExtra("key3","$newName")
+            setResult(RESULT_OK, i)
             auth.signOut()
             finish()
         }
