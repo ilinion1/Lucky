@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Lucky</string>
+    <string name="signUp">Зарегистрироваться</string>
+    <string name="nextPrize">Еще призы!</string>
+    <string name="gain">Ваш недавний выигрыш</string>
+    <string name="lack">Испытать удачу 5$</string>
+    <string name="back">Вернуться</string>
+    <string name="conditions">Правила игры таковы:</string>
+    <string name="conditions2">Попытать удачу стоит 5$\n\n
+        Если после выпадает приз, мы свяжемся с Вами для уточнения доставки к вам товара.\n\n
+        В случае если попытка не принесла результа, с Вас списывается заявленная сумма,
+        без получения приза.\n\n
+        Доставка осуществляется в течении недели.\n\n
+        Весь товар на гарантии в течении двух недель.</string>
+    <string name="name">Имя</string>
+    <string name="name1">Фамилия</string>
+    <string name="login">Логин</string>
+    <string name="password">Пароль</string>
+    <string name="address">Адрес доставки</string>
+    <string name="replenish">Пополнить</string>
+    <string name="balans">Ваш баланс:</string>
+    <string name="cash">Укажите сумму $</string>
+
+
+
+</resources>

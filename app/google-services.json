@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "64949036363",
+    "firebase_url": "https://lucky-557a6-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "lucky-557a6",
+    "storage_bucket": "lucky-557a6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:64949036363:android:117e837fabce3aab8db4ce",
+        "android_client_info": {
+          "package_name": "com.example.portfolio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "64949036363-1j8seh4qfqusgbhh3gkp5pinh4m4ua9j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.portfolio",
+            "certificate_hash": "39d66f68629f4e87f7076264578cc8bf3f816cf3"
+          }
+        },
+        {
+          "client_id": "64949036363-oh0q2r9ejuujgr5tqitr9fj4b4k2qqo9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4javR8AaIRNV73diB2Iv4jp9IB_FheZc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "64949036363-oh0q2r9ejuujgr5tqitr9fj4b4k2qqo9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
